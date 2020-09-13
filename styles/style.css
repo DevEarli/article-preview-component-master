@@ -34,7 +34,7 @@ body {
 @media screen and (max-width: 500px) {
   .container {
     width: 20.4375rem;
-    height: 52vh;
+    height: 520px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
