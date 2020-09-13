@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  background-color: #ecf2f8;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 43.75rem;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 100px 300px -100px #9eafc2;
+          box-shadow: 0 100px 300px -100px #9eafc2;
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    width: 20.4375rem;
+    height: 52vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    overflow: hidden;
+  }
+}
+
+.container .image {
+  -webkit-box-flex: 1.2;
+      -ms-flex: 1.2;
+          flex: 1.2;
+  background-image: url("../images/drawers.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px 0 0 10px;
+}
+
+@media screen and (max-width: 500px) {
+  .container .image {
+    height: 31.25rem;
+    border-radius: 10px 10px 0 0;
+  }
+}
+
+.container .content {
+  -webkit-box-flex: 1.5;
+      -ms-flex: 1.5;
+          flex: 1.5;
+  background-color: #fff;
+  padding: 1.875rem 2.5rem;
+  border-radius: 0 10px 10px 0;
+}
+
+@media screen and (max-width: 500px) {
+  .container .content {
+    -webkit-box-flex: 0;
+        -ms-flex: 0;
+            flex: 0;
+    height: auto;
+    padding: 1.875rem 2.2rem 1.3rem;
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+.container .content .heading {
+  margin-bottom: 0.9375rem;
+  color: #48556a;
+}
+
+@media screen and (max-width: 500px) {
+  .container .content .heading {
+    width: auto;
+    font-size: 1rem;
+  }
+}
+
+.container .content .caption {
+  margin-bottom: 2.3rem;
+  color: #9eafc2;
+}
+
+.container .content .person-parent {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .content .person-parent .person {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .content .person-parent .person img {
+  width: 2.1875rem;
+  height: 100%;
+  margin-right: 0.625rem;
+  border-radius: 50%;
+}
+
+.container .content .person-parent .person .name p {
+  color: #48556a;
+  font-weight: 700;
+}
+
+.container .content .person-parent .person .name p:last-child {
+  color: #9eafc2;
+  font-weight: 500;
+}
+
+.container .content .person-parent .share-icon {
+  padding: 0.625rem;
+  background-color: #ecf2f8;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.container .content .person-parent .share-icon.change {
+  background-color: #6d7f97;
+}
+
+.container .content .person-parent .share-icon.change path {
+  fill: #fff;
+}
+
+.container .content .person-parent .share-box {
+  position: absolute;
+  display: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 15rem;
+  height: 3.125rem;
+  padding: 0.625rem 1.875rem;
+  background-color: #48556a;
+  top: -79px;
+  right: -100px;
+  border-radius: 10px;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 500px) {
+  .container .content .person-parent .share-box {
+    width: 20.9375rem;
+    height: 4.75rem;
+    padding: 0.625rem 2.2rem;
+    top: -41%;
+    right: -16%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+.container .content .person-parent .share-box::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid #48556a;
+  bottom: -24%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) rotate(180deg);
+          transform: translateX(-50%) rotate(180deg);
+}
+
+@media screen and (max-width: 500px) {
+  .container .content .person-parent .share-box::before {
+    display: none;
+  }
+}
+
+.container .content .person-parent .share-box p {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  color: #9eafc2;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+@media screen and (max-width: 500px) {
+  .container .content .person-parent .share-box p {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    margin-right: 0.9375rem;
+  }
+}
+
+.container .content .person-parent .share-box .icons {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (max-width: 500px) {
+  .container .content .person-parent .share-box .icons {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    width: 35%;
+  }
+}
+
+.container .content .person-parent .share-box .icons img {
+  cursor: pointer;
+}
+
+.container .content .person-parent .share-box.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .content .person-parent .share-box.opacity {
+  opacity: 1;
+}
+/*# sourceMappingURL=style.css.map */
