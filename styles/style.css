@@ -25,7 +25,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 43.75rem;
+  width: 45rem;
   border-radius: 10px;
   -webkit-box-shadow: 0 100px 300px -100px #9eafc2;
           box-shadow: 0 100px 300px -100px #9eafc2;
@@ -65,7 +65,7 @@ body {
       -ms-flex: 1.5;
           flex: 1.5;
   background-color: #fff;
-  padding: 1.875rem 2.5rem;
+  padding: 1.875rem 2.4rem;
   border-radius: 0 10px 10px 0;
 }
 
